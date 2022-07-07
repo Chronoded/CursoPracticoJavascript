@@ -1,75 +1,62 @@
-//Código para el Cuadrado
-console.group("Cuadrado");                                          //Se utiliza para agrupar las impresiones del console.log
+// //Código para el Cuadrado
+// console.group("Cuadrado");                                          //Se utiliza para agrupar las impresiones del console.log
 
-// const ladoCuadrado = 5;
-// console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
+// function perimetroCuadrado(lado) {
+//     return lado * 4;
+// } 
 
-function perimetroCuadrado(lado) {
-    return lado * 4;
-} 
+// function areaCuadrado(lado){
+//     return lado * lado;
+// }  
 
-// console.log("el perimetro del cuadrado es igual a: " + perimetroCuadrado + "cm");
+// console.groupEnd();                                                 //Hasta aqui termina la primer agrupacion
+                                                 
+// //Codigo Triangulo
+// console.group("Triángulo");
 
-function areaCuadrado(lado){
-    return lado * lado;
-}  
+// function perimetroTriangulo(lado1,lado2,base){
+//     return lado1 + lado2 + base;
+// } 
 
-// console.log("el área del cuadrado es igual a: " + areaCuadrado + "cm^2");
+// function areaTriangulo(base, altura){
+//     return (base * altura)/2;
+// } 
 
-console.groupEnd();                                                     //Hasta aqui termina la primer agrupacion
+// console.groupEnd();
 
-//Código para el Triángulo
-// const ladoTriangulo1 = 6;
-// const ladoTriangulo2 = 6;
-// const baseTriangulo3 = 4;
+// //Código para el Circulo
+// console.group("Circulos");
+
+// function diametroCirculo(radio){
+//     return radio * 2;
+// } 
+
+// const PI = Math.PI;
+// console.log("Pi es de: " + PI);
+
+// function perimertroCirculo(radio){                              //LLamar funciones dentro de funciones
+//    const diametro = diametroCirculo(radio);
+//    return diametro * PI;
+// } 
+
+// function areaCirculo(radio){
+//     return (radio * radio) * PI;
+// } 
+// console.groupEnd();
 
 
-console.group("Triángulo");
+//Simplificacion de codigo con arrowFunctions
 
-// console.log(
-//     "Los lados del triángulo1 miden: " + ladoTriangulo1
-//     + "cm, "
-//     + ladoTriangulo2 
-//     + "cm, " 
-//     + baseTriangulo3 
-//     + "cm "
-// );
+//Cuadrado
+const perimetroCuadrado = (lado) => lado * 4;
+const areaCuadrado = (lado) => lado * lado;
 
-// const alturaTriangulo = 5.5;
-// console.log("La altura del triángulo es de: " + alturaTriangulo + "cm");
+//Triangulo
+const perimetroTriangulo = (lado1,lado2,base) => lado1 + lado2 + base;
+const areaTriangulo = (base, altura) => (base * altura) / 2;
 
-function perimetroTriangulo(lado1,lado2,base){
-    return lado1 + lado2 + base;
-} 
-// console.log("El perimetro del triángulo es de: " + perimetroTriangulo + "cm");
-
-function areaTriangulo(base, altura){
-    return (base * altura)/2;
-} 
-
-// console.log("El área del Triángulo es de: " + areaTriangulo + "cm^2");
-
-console.groupEnd();
-
-//Código para el Circulo
-console.group("Circulos");
-
-// const radioCirculo = 4;
-// console.log("El radio del circulo es de: " + radioCirculo + "cm");
-
-function diametroCirculo(radio){
-    return radio * 2;
-} 
-
+//Circulo
+const diametroCirculo = (radio) => radio * 2;
 const PI = Math.PI;
-console.log("Pi es de: " + PI);
-
-function perimertroCirculo(radio){                              //LLamar funciones dentro de funciones
-   const diametro = diametroCirculo(radio);
-   return diametro * PI;
-} 
-
-function areaCirculo(radio){
-    return (radio * radio) * PI;
-} 
-console.groupEnd();
+const perimertroCirculo = (radio) => diametroCirculo(radio) * PI;
+const areaCirculo = (radio) => PI * radio **2;
