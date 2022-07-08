@@ -19,21 +19,37 @@
         <div class="container">
             <div class="row justify-content-evenly">
                 <div class="col-lg-4 m-5 shadow rounded bg-light">
-                    <h4 class="text-center mt-3 text-danger">Calcula el área y perimetro de un cuadrado</h2>
+                    <h4 class="text-center mt-3 text-primary">Calcula el área y perimetro de un cuadrado</h2>
                     <form>
                         <div class="mb-3">
                             <label for="" class="form-label fs-4 text-center">Escribe cuanto mide cada lado de tu cuadrado:</label>
                             <input type="number" class="form-control" id="InputCuadrado"/> 
                         </div>
                         <div class="col-auto text-center m-5">
-                            <input type="button" class="btn btn-success m-1" onclick="calcularPerimetroCuadrado()" value="Calcular el perimetro" />
-                            <input type="button" class="btn btn-success" onclick="calcularAreaCuadrado()" value="Calcular el área" />
+                            <input type="button" class="btn btn-primary m-1" onclick="calcularPerimetroCuadrado()" value="Calcular el perimetro" />
+                            <input type="button" class="btn btn-primary" onclick="calcularAreaCuadrado()" value="Calcular el área" />
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="col-lg-4 m-5 shadow rounded bg-light">
+                    <h4 class="text-center mt-3 text-danger">Calcula el área y perimetro de un Circulo</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="" class="form-label fs-4 text-center">Escribe cuanto mide el radio de tu circunferencia: </label>
+                            <input type="number" class="form-control" id="InputRadio"/> 
+                        </div>
+                        <div class="col-auto text-center m-5">
+                            <input type="button" class="btn btn-danger m-1" onclick="calcularDiametro()" value="Calcular el diametro" />
+                            <input type="button" class="btn btn-danger" onclick="calcularPerimetroCirculo()" value="Calcular el Perimetro" />
+                            <input type="button" class="btn btn-danger" onclick="calcularAreaCirculo()" value="Calcular el área" />
                         </div>
                     </form>
                 </div>
 
                 <div class="col-lg-4 m-5 shadow rounded  bg-light">
-                    <h4 class="text-center mt-3 text-danger">Calcula el área y perimetro de un Triangulo</h2>
+                    <h4 class="text-center mt-3 text-success">Calcula el área y perimetro de un Triangulo</h2>
                     <form>
                         <div class="mb-3">
                             <label for="" class="form-label fs-4 text-center">Escribe cuanto mide cada lado de tu Triangulo</label>
@@ -49,21 +65,6 @@
                         <div class="col-auto text-center m-5">
                             <input type="button" class="btn btn-success" onclick="calcularPerimetroTriangulo()" value="Calcular el perimetro" />
                             <input type="button" class="btn btn-success" onclick="calcularAreaTriangulo()" value="Calcular el área" />
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-lg-4 m-5 shadow rounded bg-light">
-                    <h4 class="text-center mt-3 text-danger">Calcula el área y perimetro de un Circulo</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="" class="form-label fs-4 text-center">Escribe cuanto mide el radio de tu circunferencia: </label>
-                            <input type="number" class="form-control" id="InputRadio"/> 
-                        </div>
-                        <div class="col-auto text-center m-5">
-                            <input type="button" class="btn btn-success m-1" onclick="calcularDiametro()" value="Calcular el diametro" />
-                            <input type="button" class="btn btn-success" onclick="calcularPerimetroCirculo()" value="Calcular el Perimetro" />
-                            <input type="button" class="btn btn-success" onclick="calcularAreaCirculo()" value="Calcular el área" />
                         </div>
                     </form>
                 </div>
