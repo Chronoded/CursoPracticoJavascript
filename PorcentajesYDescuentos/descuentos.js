@@ -1,9 +1,13 @@
-const precioOriginal = 120;
-const descuento = 18;
+// const precioOriginal = 120;
+// const descuento = 18;
 
-const porcPrecioConDescuento = 100 - descuento;
 
-const precioConDescuento = (precioOriginal * porcPrecioConDescuento) / 100;
+function calcularPrecioConDescuento(precio,descuento){
+    const porcPrecioConDescuento = 100 - descuento;
+    const precioConDescuento = (precio * porcPrecioConDescuento) / 100;
+
+    return precioConDescuento;
+}
 
 // console.log({
 //     precioOriginal,
