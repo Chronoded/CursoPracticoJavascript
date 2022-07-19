@@ -44,6 +44,18 @@
 // } 
 // console.groupEnd();
 
+//triangulo isoceles
+// const lado1 = 13;
+// const lado2 = 13;
+// const base = 10;
+
+// if (lado1 === lado2 && lado1 != base) {
+//     console.log("es un triangulo isoceles");
+//     const altura = Math.sqrt(lado1**2 - base**2 / 4);                         //formula para sacar la altura de un isoceles
+//     console.log(altura);
+// }else{
+//     console.log("no es un triangulo iscoceles");
+// }
 
 //Simplificacion de codigo con arrowFunctions
 
@@ -60,6 +72,11 @@ const diametroCirculo = (radio) => radio * 2;
 const PI = Math.PI;
 const perimertroCirculo = (radio) => diametroCirculo(radio) * PI;
 const areaCirculo = (radio) => PI * radio **2;
+
+//triangulo isoceles arrowfunctions
+
+const alturaisoceles = (lado1,lado2,base) => Math.sqrt(lado1**2 - base**2 /4);
+
 
 
 //Aqui interactuamos con HTML
@@ -128,3 +145,22 @@ function calcularAreaCirculo(){
     alert(area);
 }
 
+
+//triangulo isoceles
+
+function calcularAlturaIsoceles(lado1,lado2,base){
+    const InputLado1 = document.getElementById("isolado1");
+    const ladoiso1 = InputLado1.value
+    const InputLado2 = document.getElementById("isolado2");
+    const ladoiso2 = InputLado2.value
+    const InputBase = document.getElementById("isobase");
+    const baseiso = InputBase.value
+    
+    if (ladoiso1 === ladoiso2 && ladoiso1 != baseiso) {
+        console.log("es un triangulo isoceles");
+        const altura = alturaisoceles(ladoiso1,ladoiso2,baseiso);
+        alert(altura);
+    }else{
+        console.log("no es isoceles");
+    }
+}
